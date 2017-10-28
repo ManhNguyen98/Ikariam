@@ -1,22 +1,20 @@
 package building;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import ships.Marine;
+import ships.Research;
 
 public class Shipyard {
 	
-	private int level;
+	private int level = 1;
 	public StringBuffer imgPath;
-	public List<String> shipUnlock;
+	public Research research = new Research();
+	public Marine mainMarine = new Marine();
 	
 	public Shipyard(){
-		level = 1;
-		shipUnlock = new ArrayList<String>(Arrays.asList("RamShip"));
+		setLevel(1);
 	}
 	
 	public Shipyard(int level){
-		shipUnlock = new ArrayList<String>(Arrays.asList("RamShip"));
 		setLevel(level);
 	}
 	
@@ -30,36 +28,50 @@ public class Shipyard {
 			level = 1;
 			System.out.println("Level Shipyard must be greater than 0!");
 		}
-		this.level = level;
 		if(level >= 19){
-			shipUnlock = new ArrayList<String>(Arrays.asList("DivingBoat","MotarShip","SteamRam","PaddleSpeedboat","RocketShip","Tender","BalloonCarrier","FireShip","CatapultShip","BallistaShip","RamShip"));
+			if(this.level < level){
+				this.research.setLvDivingBoat(1);
+				if(this.research.getLvMortarShip() == 0) this.research.setLvMortarShip(1);
+				if(this.research.getLvSteamRam() == 0) this.research.setLvSteamRam(1);
+				if(this.research.getLvPaddleSpeedBoat() == 0) this.research.setLvPaddleSpeedBoat(1);
+				if(this.research.getLvRocketShip() == 0) this.research.setLvRocketShip(1);
+				if(this.research.getLvTender() == 0) this.research.setLvTender(1);
+				if(this.research.getLvBalloonCarrier() == 0) this.research.setLvBalloonCarrier(1);
+				if(this.research.getLvFireShip() == 0) this.research.setLvFireShip(1);
+				if(this.research.getLvCatapultShip() == 0) this.research.setLvCatapultShip(1);
+				if(this.research.getLvBallistaShip() == 0) this.research.setLvBallistaShip(1);
+				if(this.research.getLvRamShip() == 0) this.research.setLvRamShip(1);
+			}
 		}
 		else if(level >= 17){
-			shipUnlock = new ArrayList<String>(Arrays.asList("MotarShip","SteamRam","PaddleSpeedboat","RocketShip","Tender","BalloonCarrier","FireShip","CatapultShip","BallistaShip","RamShip"));
+			if(this.level < level){
+				this.research.setLvMortarShip(1);
+			}
 		}
 		else if(level >= 15){
-			shipUnlock = new ArrayList<String>(Arrays.asList("SteamRam","PaddleSpeedboat","RocketShip","Tender","BalloonCarrier","FireShip","CatapultShip","BallistaShip","RamShip"));
+			
 		}
 		else if(level >= 13){
-			shipUnlock = new ArrayList<String>(Arrays.asList("PaddleSpeedboat","RocketShip","Tender","BalloonCarrier","FireShip","CatapultShip","BallistaShip","RamShip"));
+			
 		}
 		else if(level >= 11){
-			shipUnlock = new ArrayList<String>(Arrays.asList("RocketShip","Tender","BalloonCarrier","FireShip","CatapultShip","BallistaShip","RamShip"));
+			
 		}
 		else if(level >= 9){
-			shipUnlock = new ArrayList<String>(Arrays.asList("Tender","BalloonCarrier","FireShip","CatapultShip","BallistaShip","RamShip"));
+			
 		}
 		else if(level >= 7){
-			shipUnlock = new ArrayList<String>(Arrays.asList("BalloonCarrier","FireShip","CatapultShip","BallistaShip","RamShip"));
+			
 		}
 		else if(level >= 4){
-			shipUnlock = new ArrayList<String>(Arrays.asList("FireShip","CatapultShip","BallistaShip","RamShip"));
+			
 		}
 		else if(level >= 3){
-			shipUnlock = new ArrayList<String>(Arrays.asList("CatapultShip","BallistaShip","RamShip"));
+			
 		}
 		else{
-			shipUnlock = new ArrayList<String>(Arrays.asList("RamShip"));
+			
 		}
+		this.level = level;
 	}
 }

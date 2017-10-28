@@ -8,6 +8,5 @@ public class Main {
 		System.out.println("Ikariam");
 		Shipyard sy = new Shipyard();
 		sy.setLevel(-5);
-		System.out.println(sy.shipUnlock);
 	}
 }
