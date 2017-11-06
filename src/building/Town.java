@@ -3,9 +3,9 @@ package building;
 public class Town {
 	
 	private int level = 1;
-	private StringBuffer owner;
+	private String owner; //mine, enemy, allies 
 	public Shipyard shipyard = new Shipyard();
-	public StringBuffer imgPath;
+	public String imgPath;
 	private int X;
 	private int Y;
 	
@@ -13,17 +13,19 @@ public class Town {
 		setLevel(1);
 	}
 	
-	public Town(int level, StringBuffer owner){
+	public Town(int level, String owner, int X, int Y){
 		setLevel(level);
 		setOwner(owner);
+		setX(X);
+		setY(Y);
 	}
 	
-	public StringBuffer getOwner() {
+	public String getOwner() {
 		return owner;
 	}
 	
-	public void setOwner(StringBuffer owner) {
-		this.owner = owner;
+	public void setOwner(String owner2) {
+		this.owner = owner2;
 	}
 	
 	public int getLevel() {
@@ -52,4 +54,17 @@ public class Town {
 		X = x;
 	}
 	
+	public void display(){
+		System.out.println("Town : ");
+		System.out.print(this.level + " ");
+		System.out.print(this.owner + " ");
+		System.out.print(this.X + " ");
+		System.out.print(this.Y + " ");
+	}	
+	
+	public boolean setShipyard(int level){
+		if(level > this.level) return false;
+		shipyard.setLevel(level);
+		return true;
+	}
 }

@@ -1,7 +1,7 @@
-package ships;
+package GUI;
+
 
 public class Marine {
-	
 	public int totalNumShip;
 	public int nBallistaShip;
 	public int nBalloonCarrier;
@@ -14,6 +14,8 @@ public class Marine {
 	public int nRocketShip;
 	public int nSteamRam;
 	public int nTender;
+	public boolean isLo = false, isColossus = false, isDolphin = false;	
+	public Research research = new Research();
 	
 	public Marine(){
 		totalNumShip = nBallistaShip = nBalloonCarrier = nCatapultShip = nDivingBoat = nFireShip = nMortarShip = nPaddleSpeedBoat = nRamShip = nRocketShip = nSteamRam = nTender;

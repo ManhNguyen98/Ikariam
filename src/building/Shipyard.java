@@ -1,13 +1,11 @@
 package building;
 
-import ships.Marine;
-import ships.Research;
+import GUI.Marine;
 
 public class Shipyard {
 	
 	private int level = 1;
 	public StringBuffer imgPath;
-	public Research research = new Research();
 	public Marine mainMarine = new Marine();
 	
 	public Shipyard(){
@@ -30,47 +28,91 @@ public class Shipyard {
 		}
 		if(level >= 19){
 			if(this.level < level){
-				this.research.setLvDivingBoat(1);
-				if(this.research.getLvMortarShip() == 0) this.research.setLvMortarShip(1);
-				if(this.research.getLvSteamRam() == 0) this.research.setLvSteamRam(1);
-				if(this.research.getLvPaddleSpeedBoat() == 0) this.research.setLvPaddleSpeedBoat(1);
-				if(this.research.getLvRocketShip() == 0) this.research.setLvRocketShip(1);
-				if(this.research.getLvTender() == 0) this.research.setLvTender(1);
-				if(this.research.getLvBalloonCarrier() == 0) this.research.setLvBalloonCarrier(1);
-				if(this.research.getLvFireShip() == 0) this.research.setLvFireShip(1);
-				if(this.research.getLvCatapultShip() == 0) this.research.setLvCatapultShip(1);
-				if(this.research.getLvBallistaShip() == 0) this.research.setLvBallistaShip(1);
-				if(this.research.getLvRamShip() == 0) this.research.setLvRamShip(1);
+				mainMarine.research.setLvDivingBoat(1);
+				if(mainMarine.research.getLvMortarShip() == 0) mainMarine.research.setLvMortarShip(1);
+				if(mainMarine.research.getLvSteamRam() == 0) mainMarine.research.setLvSteamRam(1);
+				if(mainMarine.research.getLvPaddleSpeedBoat() == 0) mainMarine.research.setLvPaddleSpeedBoat(1);
+				if(mainMarine.research.getLvRocketShip() == 0) mainMarine.research.setLvRocketShip(1);
+				if(mainMarine.research.getLvTender() == 0) mainMarine.research.setLvTender(1);
+				if(mainMarine.research.getLvBalloonCarrier() == 0) mainMarine.research.setLvBalloonCarrier(1);
+				if(mainMarine.research.getLvFireShip() == 0) mainMarine.research.setLvFireShip(1);
+				if(mainMarine.research.getLvCatapultShip() == 0) mainMarine.research.setLvCatapultShip(1);
+				if(mainMarine.research.getLvBallistaShip() == 0) mainMarine.research.setLvBallistaShip(1);
+				if(mainMarine.research.getLvRamShip() == 0) mainMarine.research.setLvRamShip(1);
 			}
 		}
 		else if(level >= 17){
 			if(this.level < level){
-				this.research.setLvMortarShip(1);
+				mainMarine.research.setLvMortarShip(1);
+				if(mainMarine.research.getLvSteamRam() == 0) mainMarine.research.setLvSteamRam(1);
+				if(mainMarine.research.getLvPaddleSpeedBoat() == 0) mainMarine.research.setLvPaddleSpeedBoat(1);
+				if(mainMarine.research.getLvRocketShip() == 0) mainMarine.research.setLvRocketShip(1);
+				if(mainMarine.research.getLvTender() == 0) mainMarine.research.setLvTender(1);
+				if(mainMarine.research.getLvBalloonCarrier() == 0) mainMarine.research.setLvBalloonCarrier(1);
+				if(mainMarine.research.getLvFireShip() == 0) mainMarine.research.setLvFireShip(1);
+				if(mainMarine.research.getLvCatapultShip() == 0) mainMarine.research.setLvCatapultShip(1);
+				if(mainMarine.research.getLvBallistaShip() == 0) mainMarine.research.setLvBallistaShip(1);
+				if(mainMarine.research.getLvRamShip() == 0) mainMarine.research.setLvRamShip(1);
 			}
 		}
 		else if(level >= 15){
-			
+			mainMarine.research.setLvSteamRam(1);
+			if(mainMarine.research.getLvPaddleSpeedBoat() == 0) mainMarine.research.setLvPaddleSpeedBoat(1);
+			if(mainMarine.research.getLvRocketShip() == 0) mainMarine.research.setLvRocketShip(1);
+			if(mainMarine.research.getLvTender() == 0) mainMarine.research.setLvTender(1);
+			if(mainMarine.research.getLvBalloonCarrier() == 0) mainMarine.research.setLvBalloonCarrier(1);
+			if(mainMarine.research.getLvFireShip() == 0) mainMarine.research.setLvFireShip(1);
+			if(mainMarine.research.getLvCatapultShip() == 0) mainMarine.research.setLvCatapultShip(1);
+			if(mainMarine.research.getLvBallistaShip() == 0) mainMarine.research.setLvBallistaShip(1);
+			if(mainMarine.research.getLvRamShip() == 0) mainMarine.research.setLvRamShip(1);
 		}
 		else if(level >= 13){
-			
+			mainMarine.research.setLvPaddleSpeedBoat(1);
+			if(mainMarine.research.getLvRocketShip() == 0) mainMarine.research.setLvRocketShip(1);
+			if(mainMarine.research.getLvTender() == 0) mainMarine.research.setLvTender(1);
+			if(mainMarine.research.getLvBalloonCarrier() == 0) mainMarine.research.setLvBalloonCarrier(1);
+			if(mainMarine.research.getLvFireShip() == 0) mainMarine.research.setLvFireShip(1);
+			if(mainMarine.research.getLvCatapultShip() == 0) mainMarine.research.setLvCatapultShip(1);
+			if(mainMarine.research.getLvBallistaShip() == 0) mainMarine.research.setLvBallistaShip(1);
+			if(mainMarine.research.getLvRamShip() == 0) mainMarine.research.setLvRamShip(1);
 		}
 		else if(level >= 11){
-			
+			mainMarine.research.setLvRocketShip(1);
+			if(mainMarine.research.getLvTender() == 0) mainMarine.research.setLvTender(1);
+			if(mainMarine.research.getLvBalloonCarrier() == 0) mainMarine.research.setLvBalloonCarrier(1);
+			if(mainMarine.research.getLvFireShip() == 0) mainMarine.research.setLvFireShip(1);
+			if(mainMarine.research.getLvCatapultShip() == 0) mainMarine.research.setLvCatapultShip(1);
+			if(mainMarine.research.getLvBallistaShip() == 0) mainMarine.research.setLvBallistaShip(1);
+			if(mainMarine.research.getLvRamShip() == 0) mainMarine.research.setLvRamShip(1);
 		}
 		else if(level >= 9){
-			
+			mainMarine.research.setLvTender(1);
+			if(mainMarine.research.getLvBalloonCarrier() == 0) mainMarine.research.setLvBalloonCarrier(1);
+			if(mainMarine.research.getLvFireShip() == 0) mainMarine.research.setLvFireShip(1);
+			if(mainMarine.research.getLvCatapultShip() == 0) mainMarine.research.setLvCatapultShip(1);
+			if(mainMarine.research.getLvBallistaShip() == 0) mainMarine.research.setLvBallistaShip(1);
+			if(mainMarine.research.getLvRamShip() == 0) mainMarine.research.setLvRamShip(1);
 		}
 		else if(level >= 7){
-			
+			mainMarine.research.setLvBalloonCarrier(1);
+			if(mainMarine.research.getLvFireShip() == 0) mainMarine.research.setLvFireShip(1);
+			if(mainMarine.research.getLvCatapultShip() == 0) mainMarine.research.setLvCatapultShip(1);
+			if(mainMarine.research.getLvBallistaShip() == 0) mainMarine.research.setLvBallistaShip(1);
+			if(mainMarine.research.getLvRamShip() == 0) mainMarine.research.setLvRamShip(1);
 		}
 		else if(level >= 4){
-			
+			mainMarine.research.setLvFireShip(1);
+			if(mainMarine.research.getLvCatapultShip() == 0) mainMarine.research.setLvCatapultShip(1);
+			if(mainMarine.research.getLvBallistaShip() == 0) mainMarine.research.setLvBallistaShip(1);
+			if(mainMarine.research.getLvRamShip() == 0) mainMarine.research.setLvRamShip(1);
 		}
 		else if(level >= 3){
-			
+			mainMarine.research.setLvCatapultShip(1);
+			mainMarine.research.setLvBallistaShip(1);
+			if(mainMarine.research.getLvRamShip() == 0) mainMarine.research.setLvRamShip(1);
 		}
-		else{
-			
+		else {
+			mainMarine.research.setLvRamShip(1);
 		}
 		this.level = level;
 	}

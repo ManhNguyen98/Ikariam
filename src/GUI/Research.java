@@ -1,4 +1,4 @@
-package ships;
+package GUI;
 
 public class Research {
 	private int lvBallistaShip;
